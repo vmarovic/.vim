@@ -14,7 +14,7 @@ set cursorline
 set background=dark
 color gruvbox
 
-set guifont=Pragmata\ Pro\ 12
+set guifont=Pragmata\ Pro\ 10
 set guioptions=none
 set guioptions=-t
 
