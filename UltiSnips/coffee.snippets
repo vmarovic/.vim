@@ -1,0 +1,42 @@
+snippet router
+router = require('express').Router()
+
+$0
+
+module.exports = router
+endsnippet
+snippet ro
+router.${1:get} '$2', (req, res, next) ->
+  $0
+endsnippet
+
+snippet tr
+'$1': en: '$2', hr: '$3', de: '$4'
+endsnippet
+
+snippet ctrl
+app.controller '$1Controller', (${2:$scope}) ->
+  console.log '$1 running...'
+  $0
+endsnippet
+
+snippet dbf
+req.db.$1.find {$2}, (err, ${3:data}) ->
+  if !!err then return next err
+  $0
+endsnippet
+
+snippet dbfi
+req.db.$1.findById ${2:req.params.id}, (err, ${3:data}) ->
+  if !!err then return next err
+  $0
+endsnippet
+
+snippet rq
+$1 = require('$1$2')$0
+endsnippet
+
+snippet err
+return next err if err
+$0
+endsnippet

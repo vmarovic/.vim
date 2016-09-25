@@ -1,0 +1,46 @@
+" Searching {{{2
+set ignorecase
+set smartcase
+set showmatch
+set incsearch
+
+ "Syntastic {{{3
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Make statusline update faster: {{{3
+set ttimeoutlen=50
+
+" Use tern_for_vim.
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
+
+let g:http_client_result_vsplit = 0 " Output http req output in split instead of vertical window
+
+" Checkers
+let g:syntastic_javascript_checkers = []
+
+set mouse=nvi
+set mousemodel=popup
+set lazyredraw
+set scrolloff=2
+set sidescrolloff=5
+set ttimeoutlen=50  " Make Esc work faster
+set wildmenu
+set textwidth=120
+
+let tern#is_show_argument_hints_enabled = 1
+
+" Ignore some filetypes.
+set wildignore+=**.map,*/vendor/*,*/img/*,*/private/*,*/photos/*,*/public/*,*/.git/*,*/.tmp/*,*/bower_components/*
+
+" Make copy/paste work between windows.
+set clipboard=unnamedplus
+
+" CtrlP settings{{{3
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_custom_ignore = 'node_modules'
+

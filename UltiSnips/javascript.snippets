@@ -1,0 +1,150 @@
+snippet (f "Function snippet" !i
+(function($1) {
+	$0
+});
+endsnippet
+
+snippet f
+function($1) {
+	$0
+}
+endsnippet
+
+snippet fn
+function $1($2) {
+	$0
+}
+endsnippet
+
+snippet c
+console.log($0);
+endsnippet
+
+snippet ctrl "snippet for a controller" !i
+controller('$1', function($scope$2) {
+	$0
+})
+endsnippet
+
+snippet sd "Static data"
+staticData.then(function(data){
+	$scope.staticData = data;
+	console.debug('staticData', data);
+});
+endsnippet
+
+snippet for "For loop"
+for (var i = 0; i $1; i++) {
+	$0
+}
+endsnippet
+
+snippet db
+request.server.plugins.modeler.db
+endsnippet
+
+snippet emit
+request.server.plugins.event.emitter.emit('$1', {
+	user: request.auth.credentials$2});
+endsnippet
+
+snippet .state
+.state('$1', {
+	url: '/$2',
+	views: {
+		main: {
+			templateUrl: '$3',
+			controller: '$4'
+		}
+	}
+})
+endsnippet
+
+snippet smf
+$1: {
+	type: this.DataTypes.${2:INTEGER(11)},
+	field: '$3'
+}$0
+endsnippet
+
+snippet rc
+class $1 extends React.Component {
+	render () {
+		return (
+			$0
+		)
+	}
+}
+endsnippet
+
+snippet react
+import React from 'react';
+
+class $1 extends React.Component {
+	constructor (props) {
+		super(props);
+	}
+
+	render () {
+		return (
+			<div>
+				$0
+			</div>
+		);
+	}
+};
+
+export default $1;
+endsnippet
+
+snippet cl
+console.log('-------------------------------------------------------------');
+endsnippet
+
+snippet dsc
+describe('$1', () => {
+	$0
+});
+endsnippet
+
+snippet it
+it('should $1', () => {
+	$0
+});
+endsnippet
+
+snippet r
+require('$1');
+$0
+endsnippet
+
+snippet R
+const $1 = require('$1');
+$0
+endsnippet
+
+snippet us
+'use strict'
+$0
+endsnippet
+
+snippet blu
+const Promise = require('bluebird');$0
+endsnippet
+
+snippet init
+'use strict';
+
+const _ = require('lodash');
+const Promise = require('bluebird');
+
+$0
+endsnippet
+
+snippet rr
+return reply(result);$0
+endsnippet
+
+snippet re
+const result =$0
+endsnippet
