@@ -46,8 +46,3 @@ so ~/.vim/conf/view.vim
 so ~/.vim/conf/edit.vim
 so ~/.vim/conf/keys.vim
 
-nnoremap [[ 2[<c-i>
-
-let g:dbext_default_profile_mySQL='type=MYSQL:user=vladimir:passwd=123:dbname=agora:host=192.168.1.14'
-autocmd BufRead * DBSetOption profile=mySQL
-
