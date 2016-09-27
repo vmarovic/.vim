@@ -1,6 +1,15 @@
+set tgc
+
 " Airline settings
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+let g:airline_section_c = airline#section#create(['%{MyGetLintStatus()}', '%t', '%m', '%r'])
+function! MyGetLintStatus()
+    if len(getloclist(0))
+        return 'X '
+    else
+        return ''
+endfunction
 
 " Trailing whitespace {{{2
 set list

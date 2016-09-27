@@ -20,7 +20,7 @@ Plugin 'tpope/vim-repeat'
 
 " Utility
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'            " find better?
+Plugin 'https://github.com/w0rp/ale.git'
 Plugin 'ternjs/tern_for_vim'             " Ternjs
 Plugin 'vim-scripts/dbext.vim'           " Query SQL
 Plugin 'aquach/vim-http-client'          " Make http requests
@@ -46,3 +46,5 @@ so ~/.vim/conf/view.vim
 so ~/.vim/conf/edit.vim
 so ~/.vim/conf/keys.vim
 
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_sign_column_always = 1

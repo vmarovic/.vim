@@ -23,13 +23,13 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 nnoremap <F8> :set hlsearch! hlsearch?<CR>
 
 " CtrlP {{{3
-nmap <c-n> :CtrlPBuffer<CR>
+"nmap <c-n> :CtrlPBuffer<CR>
 
 " General {{{2
 set pastetoggle=<Leader>p
 nnoremap <leader>h :set cursorcolumn! cursorcolumn?<CR>
 nnoremap <leader>s :set spell! spell?<CR>
-nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <c-n> :NERDTreeToggle<CR>
 nnoremap <Leader>C :lclose<CR>
 
 cnoremap w!! w !sudo tee % >/dev/null
