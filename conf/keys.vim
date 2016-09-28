@@ -66,7 +66,7 @@ nnoremap <leader>J f,a<cr><esc>
 nnoremap <leader>fr mxgg=G'x
 
 nnoremap <leader>j :!chromium https://atheneum-partners.atlassian.net/browse/$(git rev-parse --abbrev-ref HEAD)<cr>
-nnoremap <c-b> :BufExplorer<cr>
+nnoremap <leader><space> :BufExplorer<cr>
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k

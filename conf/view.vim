@@ -6,7 +6,7 @@ let g:airline_right_sep=''
 let g:airline_section_c = airline#section#create(['%{MyGetLintStatus()}', '%t', '%m', '%r'])
 function! MyGetLintStatus()
     if len(getloclist(0))
-        return 'X '
+        return ' '
     else
         return ''
 endfunction

@@ -31,6 +31,7 @@ Plugin 'groenewege/vim-less'
 "Plugin 'isRuslan/vim-es6'                " ES6 syntax
 Plugin 'moll/vim-node'                    " Vim node goodies
 Plugin 'pangloss/vim-javascript'
+Plugin 'metakirby5/codi.vim'
 
 "Plugin 'flazz/vim-colorschemes'          " Collection of color schemes
 Plugin 'morhetz/gruvbox'
