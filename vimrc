@@ -46,6 +46,7 @@ so ~/.vim/conf/basic.vim
 so ~/.vim/conf/view.vim
 so ~/.vim/conf/edit.vim
 so ~/.vim/conf/keys.vim
+so ~/.vim/conf/sql.vim
 
 let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_sign_column_always = 1
+
