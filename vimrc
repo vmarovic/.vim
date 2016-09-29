@@ -49,4 +49,4 @@ so ~/.vim/conf/keys.vim
 so ~/.vim/conf/sql.vim
 
 let g:ale_linters = {'javascript': ['eslint']}
-
+let g:ale_sign_column_always = 1
