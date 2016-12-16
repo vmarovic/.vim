@@ -72,5 +72,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
+vnoremap <leader>db :DBExecRangeSQL<cr>
+nnoremap <leader>db vip:DBExecRangeSQL<cr>
+
 " node-js jump to definition
 nnoremap [[ 2[<c-i>

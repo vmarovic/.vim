@@ -29,15 +29,15 @@ set scrolloff=2
 set sidescrolloff=5
 set ttimeoutlen=50  " Make Esc work faster
 set wildmenu
-set textwidth=120
+set textwidth=80
 
 let tern#is_show_argument_hints_enabled = 1
 
 " Ignore some filetypes.
-set wildignore+=**.map,*/vendor/*,*/img/*,*/private/*,*/photos/*,*/public/*,*/.git/*,*/.tmp/*,*/bower_components/*
+set wildignore+=**.map,*/vendor/*,*/img/*,*/private/*,*/photos/*,*/public/*,*/.git/*,*/.tmp/*,*/bower_components/*,*/files/*
 
 " Make copy/paste work between windows.
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " CtrlP settings{{{3
 let g:ctrlp_cmd = 'CtrlP'
