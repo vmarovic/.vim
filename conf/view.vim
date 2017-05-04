@@ -17,7 +17,7 @@ set cursorline
 set background=dark
 color onedark
 
-set guifont=Pragmata\ Pro\ 10
+"set guifont=Pragmata\ Pro\ 10
 set guioptions=none
 set guioptions=-t
 

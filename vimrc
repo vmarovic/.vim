@@ -15,7 +15,7 @@ Plugin 'sjl/gundo.vim'                   " gundo
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'godlygeek/tabular'               " tabular - align code
 Plugin 'SirVer/ultisnips'                " Ultisnips
-"Plugin 'majutsushi/tagbar'               " Tagbar
+Plugin 'majutsushi/tagbar'               " Tagbar
 Plugin 'tpope/vim-repeat'
 Plugin 'chiedo/vim-case-convert'
 Plugin 'mileszs/ack.vim'
@@ -51,7 +51,7 @@ set nocompatible
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_javascript_eslint_use_global=1
 let g:ale_sign_column_always = 1
-"let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 
 so ~/.vim/conf/basic.vim
 so ~/.vim/conf/view.vim
@@ -80,3 +80,52 @@ nnoremap <leader>{ F{af}ivi}:s/,/,\r/gvi}=
 nnoremap <leader>1 1<c-w><c-w>
 nnoremap <leader>2 2<c-w><c-w>
 nnoremap <leader>3 3<c-w><c-w>
+
+nnoremap <leader>f: :Tabularize /:\zs<cr>
+vnoremap <leader>f: :Tabularize /:\zs<cr>
+
+function! SetWidth2()
+  set tabstop=2     " A tab is 4 spaces
+  set softtabstop=2 " Insert 4 spaces when tab is pressed
+  set shiftwidth=2  " An indent is 4 spaces
+endfunction
+
+function! SetWidth4()
+  set tabstop=4     " A tab is 4 spaces
+  set softtabstop=4 " Insert 4 spaces when tab is pressed
+  set shiftwidth=4  " An indent is 4 spaces
+endfunction
+
+function! Todo()
+  pedit ~/todo.txt
+  execute "normal 1\<c-w>\<c-w>"
+endfunction
+
+command! Todo execute Todo()
+
+augroup indentation
+    au!
+    " Automatically choose the correct dbext profile
+    autocmd BufRead */aep2-agora/* call SetWidth4()
+    autocmd BufRead */adplastik/* call SetWidth2()
+    autocmd BufRead */malascena/* call SetWidth4()
+    autocmd BufRead */gcp/* call SetWidth2()
+augroup end
+
+autocmd! GUIEnter * set vb t_vb=
+
+autocmd! Bufenter *.dust set filetype=html
+
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
+let g:tern#command=['node', '/Users/vladimir/.vim/bundle/tern_for_vim/node_modules/tern/bin/tern']
+
+nnoremap <C-]> :TernDef<cr>
+nnoremap <C-S-]> :TernDefPreview<cr>
+nnoremap <C-S-[> :TernRefs<cr>
+
+
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif

@@ -34,7 +34,7 @@ set textwidth=80
 let tern#is_show_argument_hints_enabled = 1
 
 " Ignore some filetypes.
-set wildignore+=**.map,*/vendor/*,*/img/*,*/private/*,*/photos/*,*/public/*,*/.git/*,*/.tmp/*,*/bower_components/*,*/files/*
+set wildignore+=**.map,*/build/*,*/vendor/*,*/img/*,*/private/*,*/photos/*,*/public/*,*/.git/*,*/.tmp/*,*/bower_components/*,*/files/*
 
 " Make copy/paste work between windows.
 set clipboard=unnamed

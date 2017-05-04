@@ -165,3 +165,15 @@ snippet 'const currentUser'
 const currentUser = request.auth.credentials;
 $0
 endsnippet
+
+snippet FL
+<FileLink filename='DE_$1.pndf' label="$1" /><br/>$0
+endsnippet
+
+snippet swal
+swal({
+	type: '${1:success}',
+	title: '$2',
+	text: '$3'
+});$0
+endsnippet
